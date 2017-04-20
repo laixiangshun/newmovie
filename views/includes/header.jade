@@ -1,0 +1,53 @@
+.navbar.navbar-default.navbar-fixed-bottom
+   .container
+      .navbar-header
+         a.navbar-brand(href="/") #{title}
+      p.navbar-text.navbar-right
+         a.navbar-btn(href="#",data-toggle="modal",data-target="#signupModal") 注册
+         sapn &nbsp;|&nbsp;
+         a.navbar-btn(href="#",data-toggle="modal",data-target="#signinModal") 登录
+
+.container
+   .row
+      .page-header
+         h1=title
+           .small 重度电影迷
+
+#signupModal.modal.fade
+   .modal-dialog
+      .modal-content
+         form(method="post",action="/user/signup")
+            .modal-header 注册
+            .modal-body
+               .form-group
+                  label(for="signupName") 用户名
+                  input#signupName.form-control(name="user[name]",type="text")
+               //.panel.panel-default
+                  .panel-heading
+                     h3.panel-title
+                  .panel-body
+                     label(for="signupName") 用户名
+                     input#signupName.form-control(name="user[name]",type="text")
+                     label(for="signupPassword") 密码
+                     input#signupPassword.form-control(name="user[password]",type="text")
+               .form-group
+                  label(for="signupPassword") 密码
+                  input#signupPassword.form-control(name="user[password]",type="text")
+            .modal-footer
+               button.btn.btn-success(type="submit") 提交
+               button.btn.btn-default(type="button",data-dismiss="modal") 关闭
+#signinModal.modal.fade
+   .modal-dialog
+      .modal-content
+         form(method="post",action="/user/signin")
+            .modal-header 登录
+            .modal-body
+               .form-group
+                  label(for="signinName") 用户名
+                  input#signinName.form-control(name="user[name]",type="text",width="200")
+               .form-group
+                  label(for="signinPassword") 密码
+                  input#signinPassword.form-control(name="user[password]",type="text")
+            .modal-footer
+               button.btn.btn-success(type="submit") 提交
+               button.btn.btn-default(type="button",data-dismiss="modal") 关闭
