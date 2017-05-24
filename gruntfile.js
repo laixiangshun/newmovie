@@ -32,8 +32,8 @@ module.exports=function(grunt){
                     delayTime: 1,
                     env: {
                         PORT: 3000
-                    }
-                     //cwd: _dirname
+                    },
+                     cwd: __dirname
                 }
             }
         },

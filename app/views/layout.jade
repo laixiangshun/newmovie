@@ -1,0 +1,11 @@
+doctype
+html
+   head
+      meta(http-equiv="content-type" content="text/html;charset=utf-8")
+      title #{title}
+      include ./includes/head.jade
+   body(style={'padding-bottom':'50px'})
+      include ./includes/header.jade
+      include ./includes/sidbar.jade
+      .page-header
+         block content
